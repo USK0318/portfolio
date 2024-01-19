@@ -3,6 +3,7 @@ import { styled } from '@mui/system';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import myImage from '../media/home.png';
+import ProjectsPage from './Project';
 
 const Container = styled('div')({
   display: 'flex',
@@ -96,6 +97,7 @@ const Home = () => {
           </ImageContainer>
         </ContentContainer>
       </Container>
+      <ProjectsPage/>
     </div>
   );
 };
