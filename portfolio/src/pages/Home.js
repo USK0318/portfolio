@@ -4,6 +4,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import myImage from '../media/home.png';
 import ProjectsPage from './Project';
+import ContactForm from './Contact';
+import About from './About';
 
 const Container = styled('div')({
   display: 'flex',
@@ -68,6 +70,17 @@ const GetCVButton = styled(Button)({
   },
 });
 
+const downloadCV = () => {
+  // Change 'path_to_cv.pdf' to the actual path of your CV
+  const cvPath = '../media/U Saikiran CV.pdf';
+  const link = document.createElement('a');
+  link.href = cvPath;
+  link.download = '../media/U Saikiran CV.pdf'; // You can change the downloaded file name
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 const Home = () => {
   return (
     <div>
@@ -86,7 +99,7 @@ const Home = () => {
               while crafting engaging user interfaces with ReactJS for seamless and <br></br>dynamic web experiences
               </SmallText>
               <div>
-                <GetCVButton variant="contained" color="primary">
+                <GetCVButton variant="contained" color="primary" onClick={downloadCV}>
                   Get CV
                 </GetCVButton>
               </div>
@@ -97,7 +110,13 @@ const Home = () => {
           </ImageContainer>
         </ContentContainer>
       </Container>
+      <h3 style={{ textAlign:"center", fontWeight:'bold' }}>A Bit About Me</h3>
+      <hr style={{ width: '80%', maxWidth: '1000px', margin: 'auto' }} /><br></br>
+      <About/>
       <ProjectsPage/>
+      <h3 style={{ textAlign:"center", fontWeight:'bold' }}>Contact</h3>
+      <hr style={{ width: '80%', maxWidth: '1000px', margin: 'auto' }} /><br></br>
+      <ContactForm/>
     </div>
   );
 };

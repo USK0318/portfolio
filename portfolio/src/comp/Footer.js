@@ -12,26 +12,28 @@ export const Footer = () => {
             {/* Centered email box */}
             <CDBBox display="flex" alignItems="center" className="ms-md-3 justify-content-center">
               <CDBIcon icon="envelope" className="me-2" /> {/* Email Icon */}
-              <span className="h6">saikiranuppalapati2@gmail.com</span>
+              <a href="mailto:saikiranuppalapati2@gmail.com" className="h6" style={{ textDecoration: 'none', color: 'white' }}>
+                saikiranuppalapati2@gmail.com
+              </a>
             </CDBBox>
             {/* HackerRank, GitHub, LinkedIn, and Twitter buttons with FontAwesome icons */}
             <CDBBox display="flex" className="mt-4 justify-content-center">
-              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.hackerrank.com/profile/uppalapatisaiki1" target="_blank" rel="noopener noreferrer">
                 <CDBBtn flat color="white">
                   <FontAwesomeIcon icon={faHackerrank} />
                 </CDBBtn>
               </a>
-              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/USK0318" target="_blank" rel="noopener noreferrer">
                 <CDBBtn flat color="white" className="mx-3">
                   <FontAwesomeIcon icon={faGithub} />
                 </CDBBtn>
               </a>
-              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/uppalapatisaikiran/" target="_blank" rel="noopener noreferrer">
                 <CDBBtn flat color="white" className="mx-3">
                   <FontAwesomeIcon icon={faLinkedin} />
                 </CDBBtn>
               </a>
-              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+              <a href="##" target="_blank" rel="noopener noreferrer">
                 <CDBBtn flat color="white">
                   <FontAwesomeIcon icon={faTwitter} />
                 </CDBBtn>

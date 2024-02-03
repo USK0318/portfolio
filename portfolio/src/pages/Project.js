@@ -1,7 +1,7 @@
 // ProjectsPage.js
 import React from 'react';
-import appleImage from '../media/django.png';
-import mysqlImage from '../media/mysql.png';
+import appleVideo from '../media/foodie.mp4'; // Replace with actual video URLs
+import mysqlVideo from '../media/foodie.mp4'; // Replace with actual video URLs
 
 const projectCardStyle = {
   display: 'flex',
@@ -16,7 +16,7 @@ const projectCardStyle = {
   height: '300px',
 };
 
-const projectImageStyle = {
+const projectVideoStyle = {
   width: '100%',
   height: '70%',
   objectFit: 'cover',
@@ -38,22 +38,25 @@ const mobileCardStyle = {
   maxWidth: 'none', // Remove the maximum width restriction
 };
 
-const mobileImageStyle = {
-  height: '50%', // Adjust the image height for better mobile view
+const mobileVideoStyle = {
+  height: '50%', // Adjust the video height for better mobile view
 };
 
 const mobileStyles = {
   ...projectCardStyle,
   ...mobileCardStyle,
-  [projectImageStyle]: {
-    ...projectImageStyle,
-    ...mobileImageStyle,
+  [projectVideoStyle]: {
+    ...projectVideoStyle,
+    ...mobileVideoStyle,
   },
 };
 
-const Project = ({ title, description, image, isMobile }) => (
+const Project = ({ title, description, video, isMobile }) => (
   <div style={isMobile ? mobileStyles : projectCardStyle}>
-    <img src={image} alt={title} style={projectImageStyle} />
+    <video controls style={isMobile ? { ...projectVideoStyle, ...mobileVideoStyle } : projectVideoStyle}>
+      <source src={video} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
     <div style={projectDetailsStyle}>
       <h2>{title}</h2>
       <p>{description}</p>
@@ -65,37 +68,12 @@ const projectsData = [
   {
     title: 'apple',
     description: 'i am apple',
-    image: appleImage,
+    video: appleVideo,
   },
   {
     title: 'Project 2',
     description: 'Description of Project 2.',
-    image: mysqlImage,
-  },
-  {
-    title: 'apple',
-    description: 'i am apple',
-    image: appleImage,
-  },
-  {
-    title: 'Project 2',
-    description: 'Description of Project 2.',
-    image: mysqlImage,
-  },
-  {
-    title: 'apple',
-    description: 'i am apple',
-    image: appleImage,
-  },
-  {
-    title: 'Project 2',
-    description: 'Description of Project 2.',
-    image: mysqlImage,
-  },
-  {
-    title: 'Project 2',
-    description: 'Description of Project 2.',
-    image: mysqlImage,
+    video: mysqlVideo,
   },
 ];
 
