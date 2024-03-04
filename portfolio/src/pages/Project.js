@@ -1,31 +1,7 @@
 // ProjectsPage.js
 import React from 'react';
-import appleVideo from '../media/foodie.mp4'; // Replace with actual video URLs
-import mysqlVideo from '../media/foodie.mp4'; // Replace with actual video URLs
-
-const projectCardStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  border: '1px solid #ddd',
-  borderRadius: '8px',
-  boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-  margin: '10px', // Adjust margin for better spacing
-  overflow: 'hidden',
-  width: 'calc(33.33% - 20px)', // 20px is the combined margin (10px on each side)
-  maxWidth: '500px',
-  height: '300px',
-};
-
-const projectVideoStyle = {
-  width: '100%',
-  height: '70%',
-  objectFit: 'cover',
-};
-
-const projectDetailsStyle = {
-  padding: '10px',
-  flex: 1,
-};
+import appleVideo from '../media/foodie.mp4';
+import mysqlVideo from '../media/foodie.mp4';
 
 const boldTitleStyle = {
   margin: '10px',
@@ -33,59 +9,119 @@ const boldTitleStyle = {
   textAlign: 'center',
 };
 
-const mobileCardStyle = {
-  width: '85%', // Set the width to 100% for mobile view
-  maxWidth: 'none', // Remove the maximum width restriction
-};
-
-const mobileVideoStyle = {
-  height: '50%', // Adjust the video height for better mobile view
-};
-
-const mobileStyles = {
-  ...projectCardStyle,
-  ...mobileCardStyle,
-  [projectVideoStyle]: {
-    ...projectVideoStyle,
-    ...mobileVideoStyle,
-  },
-};
-
-const Project = ({ title, description, video, isMobile }) => (
-  <div style={isMobile ? mobileStyles : projectCardStyle}>
-    <video controls style={isMobile ? { ...projectVideoStyle, ...mobileVideoStyle } : projectVideoStyle}>
-      <source src={video} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div style={projectDetailsStyle}>
-      <h2>{title}</h2>
-      <p>{description}</p>
-    </div>
-  </div>
-);
-
-const projectsData = [
-  {
-    title: 'apple',
-    description: 'i am apple',
-    video: appleVideo,
-  },
-  {
-    title: 'Project 2',
-    description: 'Description of Project 2.',
-    video: mysqlVideo,
-  },
-];
-
 const ProjectsPage = () => {
-  const isMobile = window.innerWidth <= 600; // Set your breakpoint here
+  const isMobile = window.innerWidth <= 600;
+
+  const Project = ({ title, description, video, githubPath }) => {
+    const projectCardStyle = {
+      display: 'flex',
+      flexDirection: 'column',
+      border: '1px solid #ddd',
+      borderRadius: '8px',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+      margin: '10px',
+      overflow: 'hidden',
+      width: isMobile ? '85%' : 'calc(33.33% - 20px)',
+      maxWidth: '500px',
+      height: '300px',
+      backgroundColor: '#F5F5F5',
+      cursor: 'pointer',
+    };
+
+    const projectVideoStyle = {
+      width: '100%',
+      height: isMobile ? '80%' : '110%',
+      objectFit: 'cover',
+    };
+
+    const mobileCardStyle = {
+      width: '85%',
+      maxWidth: 'none',
+    };
+
+    const mobileVideoStyle = {
+      height: '99%',
+    };
+
+    const mobileStyles = {
+      ...projectCardStyle,
+      ...mobileCardStyle,
+      video: {
+        ...projectVideoStyle,
+        ...mobileVideoStyle,
+      },
+    };
+
+    const handleVideoClick = () => {
+      // Navigate to the respective GitHub path when the video is clicked
+      window.location.href = githubPath;
+    };
+
+    return (
+      <div style={isMobile ? mobileStyles : projectCardStyle} onClick={handleVideoClick}>
+        <video autoPlay muted loop style={isMobile ? { ...projectVideoStyle, ...mobileVideoStyle } : projectVideoStyle}>
+          <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div style={{ padding: '10px', flex: 1 }}>
+          <h5 style={{ fontWeight: 'bold' }}>{title}</h5>
+          <p style={{ fontSize: '14px' }}>{description}</p>
+        </div>
+      </div>
+    );
+  };
+
+  const projectsData = [
+    {
+      title: 'Foddie App',
+      description: 'A food app that helps you find the best food in your area.',
+      video: appleVideo,
+      githubPath: 'https://github.com/USK0318/foodie', 
+    },
+    {
+      title: 'Bike website',
+      description: 'Another project description.',
+      video: mysqlVideo,
+      githubPath: 'https://github.com/your-username/project2', 
+    },
+    {
+      title: 'AP poll service',
+      description: 'Another project description.',
+      video: mysqlVideo,
+      githubPath: 'https://github.com/your-username/project2', 
+    },
+    {
+      title: 'CRM system',
+      description: 'Another project description.',
+      video: mysqlVideo,
+      githubPath: 'https://github.com/your-username/project2', 
+    },
+    {
+      title: 'Job portal',
+      description: 'Another project description.',
+      video: mysqlVideo,
+      githubPath: 'https://github.com/your-username/project2', 
+    },
+    {
+      title: 'share me',
+      description: 'Another project description.',
+      video: mysqlVideo,
+      githubPath: 'https://github.com/your-username/project2', 
+    },
+    {
+      title: 'Data extraction',
+      description: 'Another project description.',
+      video: mysqlVideo,
+      githubPath: 'https://github.com/your-username/project2', 
+    },
+  ];
 
   return (
     <div>
       <header>
         <h3 style={boldTitleStyle}>Featured Projects</h3>
         <p style={boldTitleStyle}>Some Projects I have worked on</p>
-        <hr style={{ width: '80%', maxWidth: '1000px', margin: 'auto' }} />
+        <hr style={{ width: '90%', maxWidth: '1000px', margin: 'auto' }} />
       </header>
       <section style={{ 
         display: 'flex', 
@@ -96,7 +132,7 @@ const ProjectsPage = () => {
         margin: '40px auto' 
       }}>
         {projectsData.map((project, index) => (
-          <Project key={index} {...project} isMobile={isMobile} />
+          <Project key={index} {...project} />
         ))}
       </section>
     </div>

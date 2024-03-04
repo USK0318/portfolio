@@ -2,6 +2,7 @@ import React from 'react';
 import sai from '../media/passport photo.jpeg';
 
 const About = () => {
+  
   return (
     <div>
       <div

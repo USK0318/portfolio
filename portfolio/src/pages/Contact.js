@@ -8,6 +8,8 @@ const ContactForm = () => {
   const [message, setMessage] = useState('');
   const [formErrors, setFormErrors] = useState({});
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -62,6 +64,7 @@ const ContactForm = () => {
               required
               error={formErrors.name}
               helperText={formErrors.name}
+              name='user_name'
             />
             <TextField
               label="Subject"
@@ -73,6 +76,7 @@ const ContactForm = () => {
               required
               error={formErrors.subject}
               helperText={formErrors.subject}
+              name='user_subject'
             />
             <TextField
               label="Email"
@@ -85,6 +89,7 @@ const ContactForm = () => {
               required
               error={formErrors.email}
               helperText={formErrors.email}
+              email='user_email'
             />
             <TextField
               label="Message"
@@ -98,6 +103,7 @@ const ContactForm = () => {
               required
               error={formErrors.message}
               helperText={formErrors.message}
+              message='user_message'
             />
             <Button type="submit" variant="contained" style={{ width: '100%', marginTop: '20px', backgroundColor: 'green', color: '#fff' }}>
               Submit
