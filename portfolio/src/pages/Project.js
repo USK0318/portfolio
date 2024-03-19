@@ -1,7 +1,9 @@
 // ProjectsPage.js
 import React from 'react';
 import appleVideo from '../media/foodie.mp4';
+import bike from '../media/bike.mp4'; 
 import mysqlVideo from '../media/foodie.mp4';
+import crm from '../media/crm.mp4';
 
 const boldTitleStyle = {
   margin: '10px',
@@ -80,15 +82,15 @@ const ProjectsPage = () => {
     },
     {
       title: 'Bike website',
-      description: 'Another project description.',
-      video: mysqlVideo,
-      githubPath: 'https://github.com/your-username/project2', 
+      description: 'This is a bike showroom website.',
+      video: bike,
+      githubPath: 'https://github.com/Pavani-Developer/Project-1', 
     },
     {
-      title: 'AP poll service',
-      description: 'Another project description.',
-      video: mysqlVideo,
-      githubPath: 'https://github.com/your-username/project2', 
+      title: 'CRM system',
+      description: 'CRM system for managing the customer data for an education instute.',
+      video: crm,
+      githubPath: 'https://github.com/Pavani-Developer/CRM-FRONTEND2/tree/master', 
     },
     {
       title: 'CRM system',
