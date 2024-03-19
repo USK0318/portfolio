@@ -4,6 +4,7 @@ import appleVideo from '../media/foodie.mp4';
 import bike from '../media/bike.mp4'; 
 import mysqlVideo from '../media/foodie.mp4';
 import crm from '../media/crm.mp4';
+import DE from '../media/DE.mp4';
 
 const boldTitleStyle = {
   margin: '10px',
@@ -93,10 +94,10 @@ const ProjectsPage = () => {
       githubPath: 'https://github.com/Pavani-Developer/CRM-FRONTEND2/tree/master', 
     },
     {
-      title: 'CRM system',
-      description: 'Another project description.',
-      video: mysqlVideo,
-      githubPath: 'https://github.com/your-username/project2', 
+      title: 'Data Extrection',
+      description: 'We extrect data from PDFs in to Excal',
+      video: DE,
+      githubPath: '', 
     },
     {
       title: 'Job portal',
