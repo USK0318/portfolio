@@ -48,8 +48,7 @@ const ContactForm = () => {
 
   return (
     <Container component="main" maxWidth="sm" style={{ textAlign: 'center' }}>
-      <h3 style={{ textAlign:"center", fontWeight:'bold' }}>Contact</h3>
-      <hr style={{ width: '80%', maxWidth: '1000px', margin: 'auto' }} /><br></br>
+
       <Paper elevation={3} style={{ padding: '20px', marginTop: '20px' }}>
         <>
           <Typography variant="h5">Get In Touch</Typography>
