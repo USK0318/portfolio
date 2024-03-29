@@ -1,10 +1,13 @@
 import React from 'react';
 import sai from '../media/passport photo.jpeg';
+import Git from './Git';
 
 const About = () => {
   
   return (
     <div>
+      <h3 style={{ textAlign:"center", fontWeight:'bold' }} id="about">A Bit About Me</h3>
+      <hr style={{ width: '80%', maxWidth: '1000px', margin: 'auto' }} /><br></br>
       <div
         style={{
           display: 'flex',
@@ -36,7 +39,8 @@ const About = () => {
               src={sai}
               alt='sai'
               style={{
-                width: '250px',
+                width: '100%', // Make the image width 100% of its container
+                maxWidth: '550px', // Limit the maximum width to 550px
                 margin: '1px',
               }}
             />
@@ -126,6 +130,8 @@ const About = () => {
 
         {/* ... (rest of the content) ... */}
       </div>
+      <h2 style={{ textAlign:"center", fontWeight:'bold' }}>My Git Profile</h2>
+      <a href="https://github.com/USK0318" style={{ textAlign:"center",textDecoration:'none' }}><Git username='USK0318'/> </a>
     </div>
   );
 };

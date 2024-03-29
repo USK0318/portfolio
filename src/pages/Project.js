@@ -2,7 +2,6 @@
 import React from 'react';
 import appleVideo from '../media/foodie.mp4';
 import bike from '../media/bike.mp4'; 
-import mysqlVideo from '../media/foodie.mp4';
 import crm from '../media/crm.mp4';
 import DE from '../media/DE.mp4';
 
@@ -98,25 +97,8 @@ const ProjectsPage = () => {
       description: 'We extrect data from PDFs in to Excal',
       video: DE,
       githubPath: '', 
-    },
-    {
-      title: 'Job portal',
-      description: 'Another project description.',
-      video: mysqlVideo,
-      githubPath: 'https://github.com/your-username/project2', 
-    },
-    {
-      title: 'share me',
-      description: 'Another project description.',
-      video: mysqlVideo,
-      githubPath: 'https://github.com/your-username/project2', 
-    },
-    {
-      title: 'Data extraction',
-      description: 'Another project description.',
-      video: mysqlVideo,
-      githubPath: 'https://github.com/your-username/project2', 
-    },
+    }
+    
   ];
 
   return (
