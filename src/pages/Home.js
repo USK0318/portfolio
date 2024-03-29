@@ -111,9 +111,7 @@ const Home = () => {
         </ContentContainer>
       </Container>
       <About/>
-     <ProjectsPage/>
-      <h3 style={{ textAlign:"center", fontWeight:'bold' }}>Contact</h3>
-      <hr style={{ width: '80%', maxWidth: '1000px', margin: 'auto' }} /><br></br>
+      <ProjectsPage/>
       <ContactForm/>
     </div>
   );
