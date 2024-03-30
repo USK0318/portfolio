@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, TextField, Typography, Container, Paper } from '@mui/material';
+import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -7,8 +8,6 @@ const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [formErrors, setFormErrors] = useState({});
-
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,21 +33,28 @@ const ContactForm = () => {
       return;
     }
 
-    // Add logic to handle form submission (e.g., sending data to a server or API)
-    console.log('Form submitted:', { name, subject, email, message });
-
-    // Reset the form after submission if needed
-    setName('');
-    setSubject('');
-    setEmail('');
-    setMessage('');
-    setFormErrors({});
-    // Set submitted to true to show the thank-you message
+    // Send email using Email.js
+    emailjs.sendForm('service_14zsmq2', 'template_khzdzcs', e.target, 'nHqIuVBfnyh_toEEL')
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        // Reset the form after successful submission
+        setName('');
+        setSubject('');
+        setEmail('');
+        setMessage('');
+        setFormErrors({});
+        // Show success message
+        alert('Your message has been sent successfully!');
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error.text);
+        // Show error message
+        alert('An error occurred while sending your message. Please try again later.');
+      });
   };
 
   return (
     <Container component="main" maxWidth="sm" style={{ textAlign: 'center' }}>
-
       <Paper elevation={3} style={{ padding: '20px', marginTop: '20px' }}>
         <>
           <Typography variant="h5">Get In Touch</Typography>
@@ -90,7 +96,7 @@ const ContactForm = () => {
               required
               error={formErrors.email}
               helperText={formErrors.email}
-              email='user_email'
+              name='user_email'
             />
             <TextField
               label="Message"
@@ -104,7 +110,7 @@ const ContactForm = () => {
               required
               error={formErrors.message}
               helperText={formErrors.message}
-              message='user_message'
+              name='user_message'
             />
             <Button type="submit" variant="contained" style={{ width: '100%', marginTop: '20px', backgroundColor: 'green', color: '#fff' }}>
               Submit
