@@ -1,6 +1,7 @@
 import React from 'react';
 import { CDBBox, CDBBtn, CDBIcon } from 'cdbreact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faHackerrank, faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export const Footer = () => {
