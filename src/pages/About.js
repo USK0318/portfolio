@@ -120,7 +120,7 @@ const About = () => {
               </div>
 
               <div style={{ background: '#4285F4', borderRadius: '50%', padding: '10px', margin: '10px' }}>
-                <li><i className="fab fa-google fa-3x" style={{ color: '#fff' }}></i></li>
+                <li><i title='Google ads' className="fab fa-google fa-3x" style={{ color: '#fff' }}></i></li>
               </div>
 
               

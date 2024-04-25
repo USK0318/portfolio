@@ -4,6 +4,7 @@ import appleVideo from '../media/foodie.mp4';
 import bike from '../media/bike.mp4'; 
 import crm from '../media/crm.mp4';
 import DE from '../media/DE.mp4';
+import djangoecomers from '../media/djengo-ecomers.mp4';
 
 const boldTitleStyle = {
   margin: '10px',
@@ -93,10 +94,16 @@ const ProjectsPage = () => {
       githubPath: 'https://github.com/Pavani-Developer/CRM-FRONTEND2/tree/master', 
     },
     {
-      title: 'Data Extrection',
+      title: 'Data Extraction',
       description: 'We extrect data from PDFs in to Excal',
       video: DE,
       githubPath: '', 
+    },
+    {
+      title: 'Django Ecommerce',
+      description: 'Ecommerce website using Django and MySQL.',
+      video: djangoecomers ,
+      githubPath: 'https://github.com/USK0318/ecomers-Django', 
     }
     
   ];
