@@ -117,7 +117,7 @@ const ProjectsPage = () => {
       title: 'Send Anywhere Clone',
       description: 'This is a clone of Send Anywhere app using Django',
       video: shateme ,
-      githubPath: 'https://github.com/USK0318/ecomers-Django', 
+      githubPath: 'https://github.com/USK0318/sendanywhere-Django.git', 
     },
     
   ];
