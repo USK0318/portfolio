@@ -5,6 +5,7 @@ import bike from '../media/bike.mp4';
 import crm from '../media/crm.mp4';
 import DE from '../media/DE.mp4';
 import djangoecomers from '../media/djengo-ecomers.mp4';
+import reactcrud from '../media/Dashbords.mp4'
 
 const boldTitleStyle = {
   margin: '10px',
@@ -104,6 +105,12 @@ const ProjectsPage = () => {
       description: 'Ecommerce website using Django and MySQL.',
       video: djangoecomers ,
       githubPath: 'https://github.com/USK0318/ecomers-Django', 
+    },
+    {
+      title: 'Basic CRUD operation using React',
+      description: 'This is a basic CRUD operation using React.',
+      video: reactcrud ,
+      githubPath: 'https://github.com/USK0318/React-CRUD-Operations.git',
     }
     
   ];
