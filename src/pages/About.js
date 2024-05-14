@@ -1,6 +1,12 @@
 import React from 'react';
 import sai from '../media/passport photo.jpeg';
 import Git from './Git';
+import ChatIcon from '@mui/icons-material/Chat';
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
+import CodeIcon from '@mui/icons-material/Code';
+import BuildIcon from '@mui/icons-material/Build';
+import GitIcon from './Git'; // Assuming you have a custom Git icon component
+
 
 const About = () => {
   
@@ -122,7 +128,16 @@ const About = () => {
               <div style={{ background: '#4285F4', borderRadius: '50%', padding: '10px', margin: '10px' }}>
                 <li><i title='Google ads' className="fab fa-google fa-3x" style={{ color: '#fff' }}></i></li>
               </div>
-
+              <div style={{ background: 'green', borderRadius: '50%', padding: '10px', margin: '10px', fontSize: '150%' }}>
+                <li><b>Open Ai </b></li>
+              </div>
+              <div style={{ background: '#24292E', borderRadius: '50%', padding: '10px', margin: '10px' }}>
+                <li><i title='Git Copilot' className="fab fa-github-alt fa-3x" style={{ color: '#fff' }}></i></li>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+       
+       
+      </div>
               
             </ul>
           </div>

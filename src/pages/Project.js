@@ -108,8 +108,8 @@ const ProjectsPage = () => {
       githubPath: 'https://github.com/USK0318/ecomers-Django', 
     },
     {
-      title: 'Basic CRUD operation using React',
-      description: 'This is a basic CRUD operation using React.',
+      title: 'Basic CRUD operation using React Django',
+      description: "This is a basic CRUD operation using React and Django API's.",
       video: reactcrud ,
       githubPath: 'https://github.com/USK0318/React-CRUD-Operations.git',
     },
