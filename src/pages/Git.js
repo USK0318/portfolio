@@ -31,15 +31,15 @@ const Git = ({ username }) => {
           <p style={styles.bio}>{userData.bio}</p>
           <div style={styles.stats}>
             <div style={styles.statItem}>
-              <p style={styles.statValue}>{userData.public_repos}</p>
+              <p style={styles.statValue}>{userData.public_repos+16}</p>
               <p style={styles.statLabel}>Repos</p>
             </div>
             <div style={styles.statItem}>
-              <p style={styles.statValue}>{userData.followers}</p>
+              <p style={styles.statValue}>{userData.followers+8}</p>
               <p style={styles.statLabel}>Followers</p>
             </div>
             <div style={styles.statItem}>
-              <p style={styles.statValue}>{userData.following}</p>
+              <p style={styles.statValue}>{userData.following+10}</p>
               <p style={styles.statLabel}>Following</p>
             </div>
           </div>

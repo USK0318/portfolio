@@ -60,8 +60,8 @@ const SmallText = styled(Typography)(({ theme }) => ({
 
 const GetCVButton = styled(Button)({
   marginTop: '40px',
-  width: '150px',
-  height: '40px',
+  width: '170px',
+  height: '50px',
   marginRight: '0px',
   transition: 'transform 0.2s ease-out', 
   '&:active': {
@@ -100,7 +100,7 @@ const Home = () => {
               </SmallText>
               <div>
                 <GetCVButton variant="contained" color="primary" onClick={downloadCV}>
-                  Get CV
+                  <b>Get CV</b>
                 </GetCVButton>
               </div>
             </TypingContainer>

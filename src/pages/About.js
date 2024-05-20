@@ -135,8 +135,6 @@ const About = () => {
                 <li><i title='Git Copilot' className="fab fa-github-alt fa-3x" style={{ color: '#fff' }}></i></li>
               </div>
               <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-       
-       
       </div>
               
             </ul>

@@ -1,0 +1,98 @@
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1300px;
+    margin: 40px auto;
+  }
+  
+  .project-card {
+    position: relative;
+    width: 380px;
+    height: 250px;
+    margin: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    filter: blur(5px);
+  }
+  
+  .project-video {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project-card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .project-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure icons are above overlay */
+  }
+  
+  .icon {
+    font-size: 36px;
+    color: #fff;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Ensure that icons are not affected by blur */
+  .project-card:hover .icon {
+    filter: none;
+  }
+  /* Ensure that icons are not affected by blur */
+  .project-card:hover .icon {
+    filter: none !important; /* Increase specificity and use !important if needed */
+  }
+  
+  /* Override any additional hover effects on icons */
+  .icon:hover {
+    transform: scale(1.2) !important; /* Use !important to ensure this style takes precedence */
+  }
+  
