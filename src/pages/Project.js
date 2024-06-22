@@ -1,5 +1,4 @@
-// ProjectsPage.js
-import React from 'react';
+import React, { useState } from 'react';
 import appleVideo from '../media/foodie.mp4';
 import bike from '../media/bike.mp4'; 
 import crm from '../media/crm.mp4';
@@ -8,8 +7,9 @@ import djangoecomers from '../media/djengo-ecomers.mp4';
 import reactcrud from '../media/Dashbords.mp4';
 import shateme from '../media/shareme.mp4';
 import jobportal from '../media/jobportal.mp4';
-
+import OTT from '../media/OTT.mp4';
 import Button from '@mui/material/Button';
+import temp from '../media/temp.mp4';
 import CodeIcon from '@mui/icons-material/Code';
 
 const boldTitleStyle = {
@@ -19,6 +19,7 @@ const boldTitleStyle = {
 };
 
 const ProjectsPage = () => {
+  const [showAll, setShowAll] = useState(false);
   const isMobile = window.innerWidth <= 600;
 
   const Project = ({ title, description, video, githubPath, live }) => {
@@ -31,6 +32,7 @@ const ProjectsPage = () => {
       margin: '10px',
       overflow: 'hidden',
       width: isMobile ? '85%' : 'calc(33.33% - 20px)',
+      height: isMobile ? 'auto' : '400px',
       maxWidth: '500px',
       backgroundColor: '#F5F5F5',
       cursor: 'pointer',
@@ -38,17 +40,18 @@ const ProjectsPage = () => {
 
     const projectVideoStyle = {
       width: '100%',
-      height: isMobile ? '50%' : '60%',
+      height: '60%',
       objectFit: 'cover',
     };
 
     const mobileCardStyle = {
       width: '85%',
+      height: 'auto',
       maxWidth: 'none',
     };
 
     const mobileVideoStyle = {
-      height: '50%',
+      height: '200px',
     };
 
     const mobileStyles = {
@@ -61,14 +64,13 @@ const ProjectsPage = () => {
     };
 
     const handleVideoClick = () => {
-      // Navigate to the respective live URL when the video is clicked
       if (live) {
         window.location.href = live;
       }
     };
 
     const handleButtonClick = (event) => {
-      event.stopPropagation(); // Prevent triggering the video click
+      event.stopPropagation();
       if (githubPath) {
         window.location.href = githubPath;
       }
@@ -117,6 +119,27 @@ const ProjectsPage = () => {
       live: 'https://bookbike.netlify.app/',
     },
     {
+      title: 'OTT Platform',
+      description: 'This is a OTT Platform using React js and IMDB free api.',
+      video: OTT,
+      githubPath: 'https://github.com/USK0318/OTT.git',
+      live: 'https://usk-movies.netlify.app/',
+    },
+    {
+      title: 'Send Anywhere Clone',
+      description: 'This is a clone of Send Anywhere app using Django',
+      video: shateme,
+      githubPath: 'https://github.com/USK0318/sendanywhere-Django.git', 
+      live: 'https://sendanywhere-django.herokuapp.com/',
+    },
+    {
+      title: 'CRUD operation using React Django',
+      description: "This is a basic CRUD operation using React and Django API's.",
+      video: reactcrud,
+      githubPath: 'https://github.com/USK0318/React-CRUD-Operations.git',
+      live: 'https://react-crud-operations.herokuapp.com/',
+    },
+    {
       title: 'CRM system',
       description: 'CRM system for managing the customer data for an education instute.',
       video: crm,
@@ -138,27 +161,22 @@ const ProjectsPage = () => {
       live: 'https://ecomers-djang.herokuapp.com/',
     },
     {
+      title: 'Template for training institutes',
+      description: 'This is a template for training institutes using HTML, CSS and JS.',
+      video: temp,
+      githubPath: 'https://github.com/USK0318/point',
+      live: 'https://usk0318.github.io/point/',
+    },
+    {
       title: 'Job Portal',
       description: 'A simple Job Portal using React js.',
       video: jobportal,
       githubPath: 'https://github.com/USK0318/Job-Portal-React',
       live: 'https://jobportal-reactjs-django.netlify.app/',
     },
-    {
-      title: 'Basic CRUD operation using React Django',
-      description: "This is a basic CRUD operation using React and Django API's.",
-      video: reactcrud,
-      githubPath: 'https://github.com/USK0318/React-CRUD-Operations.git',
-      live: 'https://react-crud-operations.herokuapp.com/',
-    },
-    {
-      title: 'Send Anywhere Clone',
-      description: 'This is a clone of Send Anywhere app using Django',
-      video: shateme,
-      githubPath: 'https://github.com/USK0318/sendanywhere-Django.git', 
-      live: 'https://sendanywhere-django.herokuapp.com/',
-    },
   ];
+
+  const visibleProjects = showAll ? projectsData : projectsData.slice(0, 6);
 
   return (
     <div>
@@ -175,10 +193,22 @@ const ProjectsPage = () => {
         maxWidth: '1300px', 
         margin: '40px auto' 
       }}>
-        {projectsData.map((project, index) => (
+        {visibleProjects.map((project, index) => (
           <Project key={index} {...project} />
         ))}
       </section>
+      {!showAll && (
+        <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          <Button 
+            onClick={() => setShowAll(true)} 
+         
+            style={{ margin: '30px', fontSize: '19px',color:'black',backgroundColor:'white',
+             }}
+          >
+            <b>----- Show More -----</b>
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

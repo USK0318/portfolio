@@ -72,10 +72,10 @@ const GetCVButton = styled(Button)({
 
 const downloadCV = () => {
   // Change 'path_to_cv.pdf' to the actual path of your CV
-  const cvPath = 'https://drive.google.com/uc?export=download&id=1TIxQlywH1qT9VWL6D3PFyOsQh80RLn9t';
+  const cvPath = 'https://drive.google.com/u/0/uc?id=1AoN2aJdihPg2ZL3w8lkw6sEIox7r8Das&export=download';
   const link = document.createElement('a');
   link.href = cvPath;
-  link.download = 'https://drive.google.com/uc?export=download&id=13AKp2ZA3z2V9eV0IT85fShe0NYGxbJMZ'; // You can change the downloaded file name
+  link.download = 'https://drive.google.com/file/d/1AoN2aJdihPg2ZL3w8lkw6sEIox7r8Das/view'; // You can change the downloaded file name
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
