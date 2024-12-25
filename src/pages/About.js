@@ -9,10 +9,10 @@ import GitIcon from './Git'; // Assuming you have a custom Git icon component
 
 
 const About = () => {
-  
+
   return (
     <div>
-      <h3 style={{ textAlign:"center", fontWeight:'bold' }} id="about">A Bit About Me</h3>
+      <h3 style={{ textAlign: "center", fontWeight: 'bold' }} id="about">A Bit About Me</h3>
       <hr style={{ width: '80%', maxWidth: '1000px', margin: 'auto' }} /><br></br>
       <div
         style={{
@@ -71,7 +71,12 @@ const About = () => {
             <p>
               I'm excited to being as a full-stack developer, and I'm confident that I can make a significant contribution to your's success. I'm also open to learning new technologies and taking on new challenges.
             </p>
-            <h2>My core tools and technologies</h2>
+            <h2 style={{
+              marginTop: '30px',
+              textAlign: 'center',
+              fontWeight: 'bold',
+              margin: '20px 0',
+            }}>My core tools and technologies</h2>
             <ul
               style={{
                 listStyleType: 'none',
@@ -81,16 +86,26 @@ const About = () => {
                 justifyContent: 'center',
               }}
             >
-                <div style={{ background: '#306998', borderRadius: '50%', padding: '10px', margin: '10px' }}>
+              <div style={{ background: '#306998', borderRadius: '50%', padding: '10px', margin: '10px' }}>
                 <li><i className="fab fa-python fa-3x"></i> </li>
+              </div>
+              <div style={{ background: '#000', borderRadius: '50%', padding: '10px', margin: '10px' }}>
+                <li><i className="fab fa-node-js fa-3x" style={{ color: '#fff' }}></i></li>
               </div>
 
               <div style={{ background: '#316192', borderRadius: '50%', padding: '10px', margin: '10px' }}>
                 <li><i className="fas fa-database fa-3x"></i> </li>
               </div>
+              <div style={{ background: 'green', borderRadius: '50%', padding: '10px', margin: '10px', color: '#fff' }}>
+                <li><b>MongoDB</b></li>
+              </div>
 
               <div style={{ background: '#1572B6', borderRadius: '50%', padding: '10px', margin: '10px', fontSize: '150%' }}>
                 <li><b>Django</b></li>
+              </div>
+
+              <div style={{ background: '#61DAFB', borderRadius: '50%', padding: '10px', margin: '10px' }}>
+                <li><i className="fab fa-react fa-3x"></i></li>
               </div>
 
               <div style={{ background: '#E44D26', borderRadius: '50%', padding: '10px', margin: '10px' }}>
@@ -108,13 +123,6 @@ const About = () => {
               </div>
               <div style={{ background: '#F0DB4F', borderRadius: '50%', padding: '10px', margin: '10px' }}>
                 <li><i className="fab fa-js fa-3x"></i> </li>
-              </div>
-              <div style={{ background: '#61DAFB', borderRadius: '50%', padding: '10px', margin: '10px' }}>
-                <li><i className="fab fa-react fa-3x"></i></li>
-              </div>
-
-              <div style={{ background: '#3776AB', borderRadius: '50%', padding: '10px', margin: '10px' }}>
-                <li><i className="fab fa-node-js fa-3x"></i></li>
               </div>
 
               <div style={{ background: '#000', borderRadius: '50%', padding: '10px', margin: '10px' }}>
@@ -135,16 +143,16 @@ const About = () => {
                 <li><i title='Git Copilot' className="fab fa-github-alt fa-3x" style={{ color: '#fff' }}></i></li>
               </div>
               <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-      </div>
-              
+              </div>
+
             </ul>
           </div>
         </div>
 
         {/* ... (rest of the content) ... */}
       </div>
-      <h2 style={{ textAlign:"center", fontWeight:'bold' }}>My Git Profile</h2>
-      <a href="https://github.com/USK0318" style={{ textAlign:"center",textDecoration:'none' }}><Git username='USK0318'/> </a>
+      <h2 style={{ textAlign: "center", fontWeight: 'bold' }}>My Git Profile</h2>
+      <a href="https://github.com/USK0318" style={{ textAlign: "center", textDecoration: 'none' }}><Git username='USK0318' /> </a>
     </div>
   );
 };
