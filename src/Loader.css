@@ -1,0 +1,90 @@
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align text vertically */
+  align-items: center;
+  height: 100vh;
+  background-color: #4875cf;
+  color: white;
+  font-family: 'Roboto', sans-serif; /* Ensure consistent font style */
+  animation: fade-out 3.5s ease 3.5s forwards; /* Trigger fade-out after 3 seconds */
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  width: 0; /* Start with no visible width */
+  animation: typing 2s steps(30, end), blink-caret 0.75s step-end infinite 3s; /* Delay for loader */
+  animation-fill-mode: forwards;
+}
+
+.subtext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: 'Courier New', Courier, monospace;
+  color: #d1d1d1; /* Subtle color for subtext */
+  margin-top: 10px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  width: 0; /* Start with no visible width */
+  animation: typing 2s steps(30, end), blink-caret 0.75s step-end infinite 3s; /* Delay for subtext */
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-right: 2px solid transparent;
+  }
+  50% {
+    border-right: 2px solid white;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  /* Adjust the loader and subtext to fit on smaller screens */
+  .loader-container {
+    padding: 20px; /* Add some padding for smaller screens */
+  }
+
+  .loader {
+    width: 80%; /* Set width to 80% of the screen */
+    font-size: 2.5rem; /* Adjust font size */
+    text-align: center; /* Center the text */
+    white-space: normal; /* Allow text to wrap */
+  }
+
+  .subtext {
+    width: 80%; /* Set width to 80% of the screen */
+    font-size: 1.5rem; /* Adjust font size */
+    text-align: center; /* Center the subtext */
+    white-space: normal; /* Allow text to wrap */
+  }
+}
