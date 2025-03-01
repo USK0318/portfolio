@@ -63,9 +63,9 @@ const GetCVButton = styled(Button)({
   width: '170px',
   height: '50px',
   marginRight: '0px',
-  transition: 'transform 0.2s ease-out', 
+  transition: 'transform 0.2s ease-out',
   '&:active': {
-    backgroundColor: 'green', 
+    backgroundColor: 'green',
     transform: 'scale(0.9)',
   },
 });
@@ -95,8 +95,8 @@ const Home = () => {
                 Full Stack Developer
               </BoldTypography>
               <SmallText>
-              Passionate about leveraging Python and MySQL expertise to design robust  <br></br>backend solutions,
-              while crafting engaging user interfaces with ReactJS for seamless and <br></br>dynamic web experiences
+                Passionate about leveraging Node.js and MySQL expertise to design robust <br></br>backend solutions,
+                while crafting engaging user interfaces with ReactJS for  <br></br>seamless and dynamic web experiences
               </SmallText>
               <div>
                 <GetCVButton variant="contained" color="primary" onClick={downloadCV}>
@@ -110,11 +110,11 @@ const Home = () => {
           </ImageContainer>
         </ContentContainer>
       </Container>
-      <About/>
-     <ProjectsPage/>
-      <h3 style={{ textAlign:"center", fontWeight:'bold' }}>Contact</h3>
+      <About />
+      <ProjectsPage />
+      <h3 style={{ textAlign: "center", fontWeight: 'bold' }}>Contact</h3>
       <hr style={{ width: '80%', maxWidth: '1000px', margin: 'auto' }} /><br></br>
-      <ContactForm/>
+      <ContactForm />
     </div>
   );
 };

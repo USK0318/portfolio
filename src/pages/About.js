@@ -59,17 +59,14 @@ const About = () => {
               order: '2', // Keep the order 2 for desktop view
             }}
           >
-            <p>
-              I'm a full-stack developer with a passion for using technology to solve real-world problems. I learned full stack development from Vcube Software Solutions (Hyderabad).
+            <p style={{ fontSize: '1.2rem' }}>
+              I'm a Node.js developer with 1.9 years of experience in web and mobile app development. I currently work at Mtouch Labs, where I design and develop scalable backend solutions and interactive user interfaces.
             </p>
-            <p>
-              During my training at Vcube Software Solutions (Hyderabad), I gained a strong understanding of both front-end and back-end technologies
+            <p style={{ fontSize: '1.2rem' }}>
+              I'm a highly motivated and results-oriented individual, always eager to improve my skills and take on new challenges. I thrive in team environments and collaborate effectively to achieve common goals.
             </p>
-            <p>
-              I'm a highly motivated and results-oriented individual. I'm always willing to go the extra mile to get the job done, and I'm always looking for ways to improve my skills and knowledge. I'm also a team player and I'm able to work effectively with others to achieve common goals.
-            </p>
-            <p>
-              I'm excited to being as a full-stack developer, and I'm confident that I can make a significant contribution to your's success. I'm also open to learning new technologies and taking on new challenges.
+            <p style={{ fontSize: '1.2rem' }}>
+              I'm excited to continue growing as a Node.js developer and contribute to innovative projects. I'm also open to learning new technologies and expanding my expertise in the field.
             </p>
             <h2 style={{
               marginTop: '30px',
